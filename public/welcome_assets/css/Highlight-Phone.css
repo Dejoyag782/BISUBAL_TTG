@@ -94,7 +94,7 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -2;
+  z-index: -1;
 }
 
 .highlight-phone .phone-mockup .screen:before {

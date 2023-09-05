@@ -1,5 +1,5 @@
 .navigation-clean {
-  color: var(--bs-light);
+  color: #333;
   border-radius: 0;
   border: none;
   margin-bottom: 0;
@@ -28,9 +28,15 @@
 }
 
 .navigation-clean .navbar-toggler {
-  color: var(--bs-light);
+  color: #888;
 }
 
+.navigation-clean.navbar-light .navbar-nav .nav-link.active, .navigation-clean.navbar-light .navbar-nav .nav-link.active:focus, .navigation-clean.navbar-light .navbar-nav .nav-link.active:hover {
+  color: #8f8f8f;
+  box-shadow: none;
+  background: none;
+  pointer-events: none;
+}
 
 .navigation-clean.navbar .navbar-nav .nav-link {
   padding-left: 18px;
