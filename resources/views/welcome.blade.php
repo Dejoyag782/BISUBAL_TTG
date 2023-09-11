@@ -29,7 +29,7 @@
                 <ul class="navbar-nav d-xxl-flex ms-auto justify-content-xxl-center align-items-xxl-center">
                     <li class="nav-item"><a class="nav-link" href="#" style="color: var(--bs-light);">Tutorial</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about" style="color: var(--bs-light);">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('home') }}"><button class="btn btn-primary border-white shadow buttons button-top" data-bss-hover-animate="pulse" type="button">Log in</button></a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('dashboard') }}"><button class="btn btn-primary border-white shadow buttons button-top" data-bss-hover-animate="pulse" type="button">Log in</button></a></li>
                 </ul>
             </div>
         </div>
@@ -41,7 +41,7 @@
                     <div class="intro">
                         <h2>Faster Schedule Making</h2>
                         <p>This time table generator uses generative algorithms to make class schedules a lot easier and faster.</p>
-                        <a class="btn btn-primary buttons" role="button" href="{{route('home')}}">Start making timetables</a>
+                        <a class="btn btn-primary buttons" role="button" href="{{route('dashboard')}}">Start making timetables</a>
                     </div>
                 </div>
                 <div class="col-sm-4">

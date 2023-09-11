@@ -113,7 +113,7 @@ body {
   border-radius: 20px;
   background-color: #aaa;
   overflow: hidden;
-  background: url(../../assets/img/screen-content-phone.png);
+  background: url(../../welcome_assets/img/screen-content-phone.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
