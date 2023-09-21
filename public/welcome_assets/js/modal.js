@@ -15,20 +15,24 @@ cancelModalBtn.addEventListener("click", function() {
 });
 
 // Add Room
-var openAddRoomBtn = document.getElementById("open_addRoom_modal");
-var closeAddRoomBtn = document.getElementById("close_addRoom_modal");
-var cancelAddRoomBtn = document.getElementById("cancel_modal_AddRoom");
-var addRoomModal = document.getElementById("addRoom_modal");
+var closeAddRoomBtn = document.getElementById("close_AddRoom_modal");
+var cancelAddRoomBtn = document.getElementById("cancel_AddRoom_modal");
+var addRoomModal = document.getElementById("rooms-modal");
 
-openAddRoomBtn.addEventListener("click", function() {
-  addRoomModal.style.display = "inline-flex";
-});
-closeAddRoomBtn.addEventListener("click", function() {
-  addRoomModal.style.display = "none";
-});
-cancelAddRoomBtn.addEventListener("click", function() {
-  addRoomModal.style.display = "none";
-});
+
+function closeAddRoomModal() {
+  addRoomModal.classList.remove('show');
+  setTimeout(function() {
+    var modalBackdrop = document.querySelector('.modal-backdrop.fade.show');
+    if (modalBackdrop) {
+      modalBackdrop.remove('show');
+    }
+  }, 400);
+}
+
+closeAddRoomBtn.addEventListener("click", closeAddRoomModal);
+cancelAddRoomBtn.addEventListener("click", closeAddRoomModal);
+
 
 // Add Course
 var openAddCourseBtn = document.getElementById("open_addCourse_modal");

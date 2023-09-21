@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoomsCRUDController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
+
+Route::get('rooms-datatable', [RoomsCRUDController::class, 'index']);
+Route::post('store-room', [RoomsCRUDController::class, 'store']);
+Route::post('edit-room', [RoomsCRUDController::class, 'edit']);
+Route::post('delete-room', [RoomsCRUDController::class, 'destroy']);

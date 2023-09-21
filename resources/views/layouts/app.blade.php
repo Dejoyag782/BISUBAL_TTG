@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    
 
     <title>{{ config('app.name', 'BISU-TTG') }}</title>
 
@@ -22,7 +21,8 @@
     <link rel="stylesheet" href="{{asset('welcome_assets/css/Data-Table.css')}}">
     <link rel="stylesheet" href="{{asset('welcome_assets/css/Features-Blue.css')}}">
     <link rel="stylesheet" href="{{asset('welcome_assets/css/Highlight-Phone.css')}}">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('datatable_assets/css/datatableProperties.css')}}">
+    <link rel="stylesheet" href="{{asset('datatable_assets/css/datatable.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="{{asset('welcome_assets/css/Login-Form-Clean.css')}}">
@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="{{asset('welcome_assets/css/Navigation-Clean.css')}}">
     <link rel="stylesheet" href="{{asset('welcome_assets/css/Navigation-with-Button.css')}}">
     <link rel="stylesheet" href="{{asset('welcome_assets/css/Newsletter-Subscription-Form.css')}}">
-    <link rel="stylesheet" href="{{asset('welcome_assets/css/styles.css')}}">
+    <link rel="stylesheet" href="{{asset('welcome_assets/css/styles.css')}}">    
 
     <!-- Scripts -->
     @vite(['resources/js/app.js'])
@@ -78,7 +78,7 @@
             </nav>
 
         <main class="">
-            @yield('content')
+            @yield('content')   
         </main>
     </div>
     <!-- <script src="{{asset('welcome_assets/bootstrap/js/bootstrap.min.js')}}"></script> -->
