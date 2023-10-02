@@ -48,6 +48,24 @@
        }
     });
   }  
+
+  function showFunc(id){
+     
+     $.ajax({
+         type:"POST",
+         url: "{{ url('show-room') }}",
+         data: { id: id },
+         dataType: 'json',
+         success: function(res){
+           $('#ShowRoomsModal').html("Show Room");
+           $("#btn-save").html('Save Changes');
+           $('#rooms-modal-show').modal('show');
+           $('#id').val(res.id);
+           $('#show_room_no').val(res.room_no);
+           $('#show_capacity').val(res.capacity);
+        }
+     });
+   }  
  
   function deleteFunc(id){
         if (confirm("Delete Record?") == true) {

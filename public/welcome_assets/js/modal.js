@@ -33,6 +33,23 @@ function closeAddRoomModal() {
 closeAddRoomBtn.addEventListener("click", closeAddRoomModal);
 cancelAddRoomBtn.addEventListener("click", closeAddRoomModal);
 
+// Show Room
+var closeShowRoomBtn = document.getElementById("close_ShowRoom_modal");
+var showRoomModal = document.getElementById("rooms-modal-show");
+
+
+function closeShowRoomModal() {
+  showRoomModal.classList.remove('show');
+  setTimeout(function() {
+    var modalBackdrop = document.querySelector('.modal-backdrop.fade.show');
+    if (modalBackdrop) {
+      modalBackdrop.remove('show');
+    }
+  }, 400);
+}
+
+closeShowRoomBtn.addEventListener("click", closeShowRoomModal);
+
 
 // Add Course
 var openAddCourseBtn = document.getElementById("open_addCourse_modal");

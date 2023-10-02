@@ -66,6 +66,14 @@ class RoomsCRUDController extends Controller
       
         return Response()->json($room);
     }
+
+    public function show(Request $request)
+    {   
+        $where = array('id' => $request->id);
+        $room  = Rooms::where($where)->first();
+      
+        return Response()->json($room);
+    }
       
       
     /**
