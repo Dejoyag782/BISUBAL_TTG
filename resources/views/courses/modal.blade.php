@@ -1,16 +1,86 @@
-<div id="addCourse_modal">
-    <div class="d-xxl-flex flex-column" id="dash_addcourse_modal_view" style="width: 650px;height: 500px;background: rgb(217,219,221);margin-top: 50px;border-radius: 10px;">
-        <div class="d-flex d-sm-flex d-xl-flex d-xxl-flex flex-row justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center justify-content-xxl-center align-items-xxl-center" style="height: 40px;color: var(--bs-indigo);background: var(--e-global-color-b068fc5);border-top-left-radius: 10px;border-top-right-radius: 10px;padding: 10px;border-bottom-style: solid;border-bottom-color: var(--bs-orange);">
-            <h5 style="color: rgb(255,255,255);width: 95%;margin-bottom: 0px;">Add New Course</h5><i class="fa fa-close d-xxl-flex justify-content-xxl-center align-items-xxl-center" id="close_addCourse_modal"></i>
+<div class="modal fade" id="course-modal" aria-hidden="true" >
+    <div class="modal-dialog modal-lg" style="top:150px; width:500px;">
+    <div class="modal-content" style="background: rgb(217,219,221); border-radius: 10px; overflow: hidden;">
+        <div class="modal-header" style="height: 40px;color: var(--bs-indigo);background: var(--e-global-color-b068fc5);border-top-left-radius: 10px;border-top-right-radius: 10px;padding: 10px;border-bottom-style: solid;border-bottom-color: var(--bs-orange);">
+        <h4 class="modal-title" id="CourseModal" style="color:white;">Add Room</h4><i class="fa fa-close d-xxl-flex justify-content-xxl-center align-items-xxl-center" id="close_AddCourse_modal"></i>
         </div>
-        <div class="d-xxl-flex flex-column justify-content-xxl-center align-items-xxl-start" style="height: 100%;padding-top: 5px;padding-right: 100px;padding-bottom: px;padding-left: 100px;">
-            <h5 style="margin-bottom: 5px;margin-top: 10px;">Name</h5><input type="text" style="width: 100%;">
-            <h5 style="margin-bottom: 5px;margin-top: 10px;">Course Code</h5><input type="text" style="width: 100%;" inputmode="numeric">
-            <h5 style="margin-bottom: 5px;margin-top: 10px;">Professors</h5><input type="text" style="width: 100%;" inputmode="numeric">
+        <div class="modal-body">
+        <form action="javascript:void(0)" id="CourseForm" name="CourseForm" class="form-horizontal" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="id" id="id">
+            <div class="form-group">
+            <label for="name" class="col-sm-3 control-label">Course Code</label>
+            <div class="col-sm-12">
+                <input type="text" class="form-control" id="course_code" name="course_code" placeholder="Enter Room No" maxlength="50" required="">
+            </div>
+            </div>  
+
+            <div class="form-group" style="margin-top:15px;">
+            <label for="name" class="col-sm-3 control-label">Course Name</label>
+            <div class="col-sm-12">
+                <input type="text" class="form-control" id="course_name" name="course_name" placeholder="Enter Capacity" maxlength="50" required="">
+            </div>
+            </div>
+
+            <div class="form-group" style="margin-top:15px;">
+            <label for="name" class="col-sm-2 control-label">Professor</label>
+            <div class="col-sm-12">
+                <input type="text" class="form-control" id="course_prof" name="course_prof" placeholder="Enter Capacity" maxlength="50" required="">
+            </div>
+            </div>
+
+
+            
+        </form>
         </div>
-        <div class="d-flex d-sm-flex d-xl-flex d-xxl-flex flex-row justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center justify-content-xxl-center align-items-xxl-center" style="height: 90px;color: var(--bs-indigo);background: rgba(108,117,125,0.57);padding: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-color: var(--bs-orange);">
-            <button class="btn btn-primary" id="cancel_modal_AddCourse" type="button" style="width: 230px;height: 45px;background: var(--bs-red);border-style: none;border-bottom-style: none;">Cancel</button>
-            <button class="btn btn-primary" type="button" style="margin-left: 20px;width: 230px;height: 45px;background: var(--bs-blue);border-style: none;">Add Course</button>
+        <div class="modal-footer" style="display: flex; flex-direction: row; justify-content: center;">
+            <div style="margin-right:20px;">
+                <button class="btn btn-danger" id="cancel_AddCourse_modal">Cancel
+                </button>
+            </div>
+            <div style="margin-left:20px;">
+                <button type="submit" class="btn btn-primary" id="btn-save">Submit
+                </button>
+            </div>
         </div>
+    </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="course-modal-show" aria-hidden="true" >
+    <div class="modal-dialog modal-lg" style="top:150px; width:500px;">
+    <div class="modal-content" style="background: rgb(217,219,221); border-radius: 10px; overflow: hidden;">
+        <div class="modal-header" style="height: 40px;color: var(--bs-indigo);background: var(--e-global-color-b068fc5);border-top-left-radius: 10px;border-top-right-radius: 10px;padding: 10px;border-bottom-style: solid;border-bottom-color: var(--bs-orange);">
+        <h4 class="modal-title" id="ShowCourseModal" style="color:white;">Add Room</h4><i class="fa fa-close d-xxl-flex justify-content-xxl-center align-items-xxl-center" id="close_ShowCourse_modal"></i>
+        </div>
+        <div class="modal-body">
+        <form action="javascript:void(0)" id="ShowCourseForm" name="ShowCourseForm" class="form-horizontal" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="id" id="id">
+            <div class="form-group">
+            <label for="name" class="col-sm-3 control-label">Course Code</label>
+            <div class="col-sm-12">
+                <input type="text" class="form-control" id="show_course_code" name="show_course_code" placeholder="Enter Room No" maxlength="50" required="">
+            </div>
+            </div>  
+
+            <div class="form-group" style="margin-top:15px;">
+            <label for="name" class="col-sm-3 control-label">Course Name</label>
+            <div class="col-sm-12">
+                <input type="text" class="form-control" id="show_course_name" name="show_course_name" placeholder="Enter Capacity" maxlength="50" required="">
+            </div>
+            </div>
+
+            <div class="form-group" style="margin-top:15px;">
+            <label for="name" class="col-sm-3 control-label">Professor</label>
+            <div class="col-sm-12">
+                <input type="text" class="form-control" id="show_course_prof" name="show_course_prof" placeholder="Enter Capacity" maxlength="50" required="">
+            </div>
+            </div>
+
+
+            
+        </form>
+        </div>
+    </div>
     </div>
 </div>

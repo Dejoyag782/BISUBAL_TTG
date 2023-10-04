@@ -52,20 +52,40 @@ closeShowRoomBtn.addEventListener("click", closeShowRoomModal);
 
 
 // Add Course
-var openAddCourseBtn = document.getElementById("open_addCourse_modal");
-var closeAddCourseBtn = document.getElementById("close_addCourse_modal");
-var cancelAddCourseBtn = document.getElementById("cancel_modal_AddCourse");
-var addCourseModal = document.getElementById("addCourse_modal");
+var closeAddCourseBtn = document.getElementById("close_AddCourse_modal");
+var cancelAddCourseBtn = document.getElementById("cancel_AddCourse_modal");
+var addCourseModal = document.getElementById("course-modal");
 
-openAddCourseBtn.addEventListener("click", function() {
-  addCourseModal.style.display = "inline-flex";
-});
-closeAddCourseBtn.addEventListener("click", function() {
-  addCourseModal.style.display = "none";
-});
-cancelAddCourseBtn.addEventListener("click", function() {
-  addCourseModal.style.display = "none";
-});
+
+function closeAddCourseModal() {
+  addCourseModal.classList.remove('show');
+  setTimeout(function() {
+    var modalBackdrop = document.querySelector('.modal-backdrop.fade.show');
+    if (modalBackdrop) {
+      modalBackdrop.remove('show');
+    }
+  }, 400);
+}
+
+closeAddCourseBtn.addEventListener("click", closeAddCourseModal);
+cancelAddCourseBtn.addEventListener("click", closeAddCourseModal);
+
+// Show Room
+var closeShowCourseBtn = document.getElementById("close_ShowCourse_modal");
+var showCourseModal = document.getElementById("course-modal-show");
+
+
+function closeShowCourseModal() {
+  showCourseModal.classList.remove('show');
+  setTimeout(function() {
+    var modalBackdrop = document.querySelector('.modal-backdrop.fade.show');
+    if (modalBackdrop) {
+      modalBackdrop.remove('show');
+    }
+  }, 400);
+}
+
+closeShowCourseBtn.addEventListener("click", closeShowCourseModal);
 
 // Add Professor
 var openAddProfessorBtn = document.getElementById("open_addProfessor_modal");
