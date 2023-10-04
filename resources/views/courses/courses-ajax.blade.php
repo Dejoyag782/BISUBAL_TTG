@@ -51,24 +51,23 @@
     });
   }  
 
-  function showCourse(id){
-     
-     $.ajax({
-         type:"POST",
-         url: "{{ url('show-course') }}",
-         data: { id: id },
-         dataType: 'json',
-         success: function(res){
-           $('#ShowCourseModal').html("Show Room");
-           $("#btn-save").html('Save Changes');
-           $('#course-modal-show').modal('show');
-           $('#id').val(res.id);
-           $('#show_course_code').val(res.course_code);
-           $('#show_course_name').val(res.course_name);
-           $('#show_course_prof').val(res.course_prof);
-        }
-     });
-   }  
+  function showCourse(id) {
+  $.ajax({
+    type: "POST",
+    url: "{{ url('show-course') }}",
+    data: { id: id },
+    dataType: 'json',
+    success: function(res) {
+      $('#ShowCourseModal').html("Show Course"); // Update the modal title to "Show Course"
+      $("#btn-save").html('Submit'); // Update the button text to "Submit"
+      $('#course-modal-show').modal('show');
+      $('#id').val(res.id);
+      $('#show_course_code').val(res.course_code);
+      $('#show_course_name').val(res.course_name);
+      $('#show_course_prof').val(res.course_prof);
+    }
+  });
+}
  
   function deleteCourse(id){
         if (confirm("Delete Record?") == true) {
