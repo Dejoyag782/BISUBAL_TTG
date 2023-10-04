@@ -70,7 +70,7 @@ function closeAddCourseModal() {
 closeAddCourseBtn.addEventListener("click", closeAddCourseModal);
 cancelAddCourseBtn.addEventListener("click", closeAddCourseModal);
 
-// Show Room
+// Show Course
 var closeShowCourseBtn = document.getElementById("close_ShowCourse_modal");
 var showCourseModal = document.getElementById("course-modal-show");
 

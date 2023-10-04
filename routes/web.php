@@ -32,7 +32,7 @@ Route::post('delete-room', [RoomsCRUDController::class, 'destroy']);
 
 
  
-Route::get('courses-datatable', [CourseCRUDController::class, 'index']);
+Route::get('course-datatable', [CourseCRUDController::class, 'index']);
 Route::post('store-course', [CourseCRUDController::class, 'store']);
 Route::post('show-course', [CourseCRUDController::class, 'show']);
 Route::post('edit-course', [CourseCRUDController::class, 'edit']);

@@ -28,11 +28,7 @@
             </div>
             </div>
 
-
-            
-        </form>
-        </div>
-        <div class="modal-footer" style="display: flex; flex-direction: row; justify-content: center;">
+            <div class="modal-footer" style="display: flex; flex-direction: row; justify-content: center;">
             <div style="margin-right:20px;">
                 <button class="btn btn-danger" id="cancel_AddCourse_modal">Cancel
                 </button>
@@ -41,7 +37,11 @@
                 <button type="submit" class="btn btn-primary" id="btn-save">Submit
                 </button>
             </div>
+            </div>
+            
+        </form>
         </div>
+        
     </div>
     </div>
 </div>

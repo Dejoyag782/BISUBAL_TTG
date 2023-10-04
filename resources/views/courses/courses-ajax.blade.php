@@ -7,15 +7,15 @@
     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
     }
   });
-    $('#courses-datatable').DataTable({
+    $('#course-datatable').DataTable({
            processing: true,
            serverSide: true,
-           ajax: "{{ url('courses-datatable') }}",
+           ajax: "{{ url('course-datatable') }}",
            columns: [
                     { data: 'course_code', name: 'course_code' },
                     { data: 'course_name', name: 'course_name' },
                     { data: 'course_prof', name: 'course_prof' },
-                    {data: 'action', name: 'action', orderable: false},
+                    { data: 'action', name: 'action', orderable: false},
                  ],
                  order: [[0, 'desc']]
        });
@@ -25,11 +25,13 @@
   function addCourse(){
  
        $('#CourseForm').trigger("reset");
-       $('#CourseModal').html("Add course");
+       $('#CourseModal').html("Add Room");
+       $("#btn-save").html('Submit');
        $('#course-modal').modal('show');
        $('#id').val('');
  
   }   
+  
   function editCourse(id){
      
     $.ajax({
@@ -38,7 +40,8 @@
         data: { id: id },
         dataType: 'json',
         success: function(res){
-          $('#CourseModal').html("Edit course");
+          $('#CourseModal').html("Edit Room");
+          $("#btn-save").html('Save Changes');
           $('#course-modal').modal('show');
           $('#id').val(res.id);
           $('#course_code').val(res.course_code);
@@ -56,7 +59,7 @@
          data: { id: id },
          dataType: 'json',
          success: function(res){
-           $('#ShowCourseModal').html("Show Course");
+           $('#ShowCourseModal').html("Show Room");
            $("#btn-save").html('Save Changes');
            $('#course-modal-show').modal('show');
            $('#id').val(res.id);
@@ -79,7 +82,7 @@
               dataType: 'json',
               success: function(res){
  
-                var oTable = $('#courses-datatable').dataTable();
+                var oTable = $('#course-datatable').dataTable();
                 oTable.fnDraw(false);
              }
           });
@@ -101,7 +104,7 @@
         processData: false,
         success: (data) => {
           $("#course-modal").modal('hide');
-          var oTable = $('#courses-datatable').dataTable();
+          var oTable = $('#course-datatable').dataTable();
           oTable.fnDraw(false);
           $("#btn-save").html('Submit');
           $("#btn-save"). attr("disabled", false);

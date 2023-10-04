@@ -51,5 +51,5 @@
 </body>
 <!-- include courses ajax crud scripts -->
 @include('courses.courses-ajax')
-<script src="{{asset('welcome_assets/js/modal.js')}}"></script>
+<!-- <script src="{{asset('welcome_assets/js/modal.js')}}"></script> -->
 </html>
