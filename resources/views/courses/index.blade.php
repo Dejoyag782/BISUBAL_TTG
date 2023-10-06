@@ -10,6 +10,7 @@
             <p>{{ $message }}</p>
         </div>
 @endif
+
 <div id="courses-container" class="main-contained-viewbox">
     <!-- Table Cont -->
     @include('courses.courses')

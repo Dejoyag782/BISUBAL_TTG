@@ -23,8 +23,8 @@
 
             <div class="modal-footer" style="display: flex; flex-direction: row; justify-content: center;">
             <div style="margin-right:20px;">
-                <button type="submit" class="btn btn-danger" id="cancel_AddRoom_modal">Cancel
-                </button>
+                <div class="btn btn-danger" id="cancel_AddRoom_modal">Cancel
+                </div>
             </div>
             <div style="margin-left:20px;">
                 <button type="submit" class="btn btn-primary" id="btn-save">Submit
@@ -48,7 +48,6 @@
         </div>
         <div class="modal-body">
         <form action="javascript:void(0)" id="ShowRoomsForm" name="ShowRoomsForm" class="form-horizontal" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="id" id="id">
             <div class="form-group">
             <label for="name" class="col-sm-2 control-label">Room No</label>
             <div class="col-sm-12">

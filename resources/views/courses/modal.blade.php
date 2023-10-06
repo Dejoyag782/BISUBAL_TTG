@@ -8,33 +8,33 @@
         <form action="javascript:void(0)" id="CourseForm" name="CourseForm" class="form-horizontal" method="POST" enctype="multipart/form-data">
             <input type="hidden" name="id" id="id">
             <div class="form-group">
-            <label for="name" class="col-sm-3 control-label">Course Code</label>
+            <label for="course_code" class="col-sm-3 control-label">Course Code</label>
             <div class="col-sm-12">
-                <input type="text" class="form-control" id="course_code" name="course_code" placeholder="Enter Room No" maxlength="50" required="">
+                <input type="text" class="form-control" id="course_code" name="course_code" placeholder="Enter Course Code" maxlength="50" required="">
             </div>
             </div>  
 
             <div class="form-group" style="margin-top:15px;">
-            <label for="name" class="col-sm-3 control-label">Course Name</label>
+            <label for="course_name" class="col-sm-3 control-label">Course Name</label>
             <div class="col-sm-12">
-                <input type="text" class="form-control" id="course_name" name="course_name" placeholder="Enter Capacity" maxlength="50" required="">
+                <input type="text" class="form-control" id="course_name" name="course_name" placeholder="Enter Course Name" maxlength="50" required="">
             </div>
             </div>
 
             <div class="form-group" style="margin-top:15px;">
-            <label for="name" class="col-sm-2 control-label">Professor</label>
+            <label for="course_prof" class="col-sm-2 control-label">Professor</label>
             <div class="col-sm-12">
-                <input type="text" class="form-control" id="course_prof" name="course_prof" placeholder="Enter Capacity" maxlength="50" required="">
+                <input type="text" class="form-control" id="course_prof" name="course_prof" placeholder="Enter Professor Name" maxlength="50" required="">
             </div>
             </div>
 
-            <div class="modal-footer" style="display: flex; flex-direction: row; justify-content: center;">
+            <div class="modal-footer" style="display: flex; flex-direction: row; justify-content: center; margin-top:20px;">
             <div style="margin-right:20px;">
-                <button class="btn btn-danger" id="cancel_AddCourse_modal">Cancel
-                </button>
+                <div class="btn btn-danger" id="cancel_AddCourse_modal">Cancel
+                </div>
             </div>
             <div style="margin-left:20px;">
-                <button type="submit" class="btn btn-primary" id="btn-save">Submit
+                <button type="submit" class="btn btn-primary" id="btn-save-course">Submit
                 </button>
             </div>
             </div>
@@ -55,7 +55,7 @@
         </div>
         <div class="modal-body">
         <form action="javascript:void(0)" id="ShowCourseForm" name="ShowCourseForm" class="form-horizontal" method="POST" enctype="multipart/form-data">
-            <input type="hidden" name="id" id="id">
+            <input type="hidden" name="show_id" id="show_id">
             <div class="form-group">
             <label for="name" class="col-sm-3 control-label">Course Code</label>
             <div class="col-sm-12">

@@ -1,12 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 use App\Models\Courses;
-
-use DataTables;
+use Datatables;
 
 class CourseCRUDController extends Controller
 {
@@ -68,13 +65,6 @@ class CourseCRUDController extends Controller
         return Response()->json($course);
     }
       
-    public function show(Request $request)
-    {   
-        $where = array('id' => $request->id);
-        $course  = Courses::where($where)->first();
-      
-        return Response()->json($course);
-    }
       
     /**
      * Remove the specified resource from storage.

@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
-    <title>Laravel 10 AJAX CRUD using DataTable js Tutorial From Scratch - Tutsmake.com</title>
+    <title>Add Rooms</title>
      
     <meta name="csrf-token" content="{{ csrf_token() }}">
      
@@ -22,7 +22,7 @@
  
 <div class="container mt-2">
  
-<div class="row">
+    <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
                 <h2>Rooms</h2>

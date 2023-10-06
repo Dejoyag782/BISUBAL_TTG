@@ -10,7 +10,7 @@
     </a>
 </div>
 <div  style="height: 30px;width: 50%;">
-    <a href="javascript:void(0);" id="delete-compnay" onClick="deleteCourse({{ $id }})" data-toggle="tooltip" data-original-title="Delete" class="btn btn-primary d-xxl-flex justify-content-xxl-center align-items-xxl-center" type="button" style="width: 100%;height: 100%;background: var(--bs-red);">
+    <a href="javascript:void(0);" id="delete-course" onClick="deleteCourse({{ $id }})" data-toggle="tooltip" data-original-title="Delete" class="btn btn-primary d-xxl-flex justify-content-xxl-center align-items-xxl-center" type="button" style="width: 100%;height: 100%;background: var(--bs-red);">
         <i class="fa fa-trash-o"></i>
     </a>
 </div>
