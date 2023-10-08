@@ -21,7 +21,7 @@ class CourseCRUDController extends Controller
             ->addIndexColumn()
             ->make(true);
         }
-        return view('courses.courses');
+        return view('dashboard.index');
     }
       
       
@@ -34,11 +34,11 @@ class CourseCRUDController extends Controller
     public function store(Request $request)
     {  
  
-        $courseId = $request->id;
+        $courseId = $request->course_id;
  
         $course   =   Courses::updateOrCreate(
                     [
-                     'id' => $courseId
+                     'course_id' => $courseId
                     ],
                     [
                     'course_code' => $request->course_code, 
@@ -59,7 +59,15 @@ class CourseCRUDController extends Controller
      */
     public function edit(Request $request)
     {   
-        $where = array('id' => $request->id);
+        $where = array('course_id' => $request->course_id);
+        $course  = Courses::where($where)->first();
+      
+        return Response()->json($course);
+    }
+
+    public function show(Request $request)
+    {   
+        $where = array('course_id' => $request->course_id);
         $course  = Courses::where($where)->first();
       
         return Response()->json($course);
@@ -74,7 +82,7 @@ class CourseCRUDController extends Controller
      */
     public function destroy(Request $request)
     {
-        $course = Courses::where('id',$request->id)->delete();
+        $course = Courses::where('course_id',$request->course_id)->delete();
       
         return Response()->json($course);
     }

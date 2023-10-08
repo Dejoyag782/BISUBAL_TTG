@@ -24,7 +24,7 @@ class RoomsCRUDController extends Controller
             ->addIndexColumn()
             ->make(true);
         }
-        return view('rooms.rooms');
+        return view('dashboard.index');
     }
       
       

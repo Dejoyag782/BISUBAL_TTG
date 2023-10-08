@@ -29,36 +29,55 @@
        $('#CourseForm').trigger("reset");
        $('#CourseModal').html("Add Company");
        $('#course-modal').modal('show');
-       $('#id').val('');
+       $('#course_id').val('');
  
-  }   
-  function editCourse(id){
+  }  
+
+  function editCourse(course_id){
      
     $.ajax({
         type:"POST",
         url: "{{ url('edit-course') }}",
-        data: { id: id },
+        data: { course_id: course_id },
         dataType: 'json',
         success: function(res){
           $('#CourseModal').html("Edit Course");
           $('#course-modal').modal('show');
-          $('#id').val(res.id);
+          $('#course_id').val(res.course_id);
           $('#course_code').val(res.course_code);
           $('#course_name').val(res.course_name);
           $('#course_prof').val(res.course_prof);
        }
     });
   }  
+
+  function showCourse(course_id){
+     
+     $.ajax({
+         type:"POST",
+         url: "{{ url('show-course') }}",
+         data: { course_id: course_id },
+         dataType: 'json',
+         success: function(res){
+           $('#ShowCourseModal').html("Show Course");
+           $('#course-modal-show').modal('show');
+           $('#show_course_id').val(res.course_id);
+           $('#show_course_code').val(res.course_code);
+           $('#show_course_name').val(res.course_name);
+           $('#show_course_prof').val(res.course_prof);
+        }
+     });
+   }  
  
-  function deleteCourse(id){
+  function deleteCourse(course_id){
         if (confirm("Delete Record?") == true) {
-        var id = id;
+        var course_id = course_id;
           
           // ajax
           $.ajax({
               type:"POST",
               url: "{{ url('delete-course') }}",
-              data: { id: id },
+              data: { course_id: course_id },
               dataType: 'json',
               success: function(res){
  
