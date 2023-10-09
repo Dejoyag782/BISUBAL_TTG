@@ -1,9 +1,11 @@
 Local:
 
 1st: composer update
-2nd: npm install
-3rd: npm run dev/build
-4th: php artisan migrate
-5th: php artisan serve --host="local.Ip" --port=8080 
+2nd: cp .env.example .env
+3rd: npm install
+4th: npm install laravel-echo pusher-js
+4th: npm run dev/build
+5th: php artisan migrate
+6th: php artisan serve --host="local.Ip" --port=8080 
 
 Online(Deployed):
