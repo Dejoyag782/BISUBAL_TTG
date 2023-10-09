@@ -1,0 +1,9 @@
+Local:
+
+1st: composer update
+2nd: npm install
+3rd: npm run dev/build
+4th: php artisan migrate
+5th: php artisan serve --host="local.Ip" --port=8080 
+
+Online(Deployed):
