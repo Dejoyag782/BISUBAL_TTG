@@ -10,7 +10,7 @@
     $('#course-datatable').DataTable({
            processing: true,
            serverSide: true,
-           ajax: "{{ url('course-datatable') }}",
+           ajax: "{{ url('course') }}",
            columns: [
                     // { data: 'id', name: 'id' },
                     { data: 'course_code', name: 'course_code' },
@@ -27,7 +27,7 @@
   function addCourse(){
  
        $('#CourseForm').trigger("reset");
-       $('#CourseModal').html("Add Company");
+       $('#CourseModal').html("Add Course");
        $('#course-modal').modal('show');
        $('#course_id').val('');
  

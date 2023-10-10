@@ -10,7 +10,7 @@
     $('#rooms-datatable').DataTable({
            processing: true,
            serverSide: true,
-           ajax: "{{ url('rooms-datatable') }}",
+           ajax: "{{ url('rooms') }}",
            columns: [
                     { data: 'room_no', name: 'room_no' },
                     { data: 'capacity', name: 'capacity' },

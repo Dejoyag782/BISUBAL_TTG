@@ -22,6 +22,7 @@ var addRoomModal = document.getElementById("rooms-modal");
 
 function closeAddRoomModal() {
   addRoomModal.classList.remove('show');
+  $("#rooms-modal").modal('hide')
   setTimeout(function() {
     var modalBackdrop = document.querySelector('.modal-backdrop.fade.show');
     if (modalBackdrop) {
@@ -40,6 +41,7 @@ var showRoomModal = document.getElementById("rooms-modal-show");
 
 function closeShowRoomModal() {
   showRoomModal.classList.remove('show');
+  $("#rooms-modal-show").modal('hide')
   setTimeout(function() {
     var modalBackdrop = document.querySelector('.modal-backdrop.fade.show');
     if (modalBackdrop) {
@@ -59,6 +61,7 @@ var addCourseModal = document.getElementById("course-modal");
 
 function closeAddCourseModal() {
   addCourseModal.classList.remove('show');
+  $("#course-modal").modal('hide')
   setTimeout(function() {
     var modalBackdrop = document.querySelector('.modal-backdrop.fade.show');
     if (modalBackdrop) {
@@ -77,6 +80,7 @@ var showCourseModal = document.getElementById("course-modal-show");
 
 function closeShowCourseModal() {
   showCourseModal.classList.remove('show');
+  $("#course-modal-show").modal('hide')
   setTimeout(function() {
     var modalBackdrop = document.querySelector('.modal-backdrop.fade.show');
     if (modalBackdrop) {
@@ -88,20 +92,42 @@ function closeShowCourseModal() {
 closeShowCourseBtn.addEventListener("click", closeShowCourseModal);
 
 // Add Professor
-var openAddProfessorBtn = document.getElementById("open_addProfessor_modal");
-var closeAddProfessorBtn = document.getElementById("close_addProfessor_modal");
-var cancelAddProfessorBtn = document.getElementById("cancel_modal_AddProfessor");
-var addProfessorModal = document.getElementById("addProfessor_modal");
+var closeAddProfessorBtn = document.getElementById("close_AddProfessor_modal");
+var cancelAddProfessorBtn = document.getElementById("cancel_AddProfessor_modal");
+var addProfessorModal = document.getElementById("professor-modal");
 
-openAddProfessorBtn.addEventListener("click", function() {
-  addProfessorModal.style.display = "inline-flex";
-});
-closeAddProfessorBtn.addEventListener("click", function() {
-  addProfessorModal.style.display = "none";
-});
-cancelAddProfessorBtn.addEventListener("click", function() {
-  addProfessorModal.style.display = "none";
-});
+
+function closeAddProfessorModal() {
+  addProfessorModal.classList.remove('show');
+  $("#professor-modal").modal('hide');
+  setTimeout(function() {
+    var modalBackdrop = document.querySelector('.modal-backdrop.fade.show');
+    if (modalBackdrop) {
+      modalBackdrop.remove('show');
+    }
+  }, 400);
+}
+
+closeAddProfessorBtn.addEventListener("click", closeAddProfessorModal);
+cancelAddProfessorBtn.addEventListener("click", closeAddProfessorModal);
+
+// Show Professor
+var closeShowProfessorBtn = document.getElementById("close_ShowProfessor_modal");
+var showProfessorModal = document.getElementById("professor-modal-show");
+
+
+function closeShowProfessorModal() {
+  showProfessorModal.classList.remove('show');
+  $("#show-professor-modal").modal('hide');
+  setTimeout(function() {
+    var modalBackdrop = document.querySelector('.modal-backdrop.fade.show');
+    if (modalBackdrop) {
+      modalBackdrop.remove('show');
+    }
+  }, 400);
+}
+
+closeShowProfessorBtn.addEventListener("click", closeShowProfessorModal);
 
 // Add Class
 var openAddClassBtn = document.getElementById("open_addClass_modal");
