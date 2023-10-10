@@ -29,6 +29,7 @@
        $('#CourseForm').trigger("reset");
        $('#CourseModal').html("Add Course");
        $('#course-modal').modal('show');
+       $("#btn-save-course").html('Save Changes');
        $('#course_id').val('');
  
   }  
@@ -59,7 +60,7 @@
          data: { course_id: course_id },
          dataType: 'json',
          success: function(res){
-           $('#ShowCourseModal').html("Show Course");
+           $('#ShowCourseModal').html("Course");
            $('#course-modal-show').modal('show');
            $('#show_course_id').val(res.course_id);
            $('#show_course_code').val(res.course_code);

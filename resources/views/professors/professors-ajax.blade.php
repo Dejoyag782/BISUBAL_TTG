@@ -30,6 +30,7 @@
        $('#ProfessorForm').trigger("reset");
        $('#ProfessorModal').html("Add Professor");
        $('#professor-modal').modal('show');
+       $("#btn-save-professor").html('Submit');
        $('#professor_id').val('');
  
   }  
@@ -44,6 +45,7 @@
         success: function(res){
           $('#ProfessorModal').html("Edit Professor");
           $('#professor-modal').modal('show');
+          $("#btn-save-professor").html('Save Changes');
           $('#professor_id').val(res.professor_id);
           $('#professor_name').val(res.professor_name);
           $('#professor_email').val(res.professor_email);
@@ -61,7 +63,7 @@
          data: { professor_id: professor_id },
          dataType: 'json',
          success: function(res){
-           $('#ShowProfessorModal').html("Show Professor");
+           $('#ShowProfessorModal').html("Professor");
            $('#professor-modal-show').modal('show');
            $('#show_professor_id').val(res.professor_id);
            $('#show_professor_name').val(res.professor_name);

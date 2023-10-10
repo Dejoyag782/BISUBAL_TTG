@@ -57,7 +57,7 @@
          data: { id: id },
          dataType: 'json',
          success: function(res){
-           $('#ShowRoomsModal').html("Show Room");
+           $('#ShowRoomsModal').html("Room");
            $("#btn-save").html('Save Changes');
            $('#rooms-modal-show').modal('show');
            $('#id').val(res.id);
