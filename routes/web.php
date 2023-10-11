@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoomsCRUDController;
 use App\Http\Controllers\CourseCRUDController;
 use App\Http\Controllers\ProfessorsCRUDController;
+use App\Http\Controllers\ClassesCRUDController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,4 +48,10 @@ Route::middleware(['auth'])->group(function () {
     Route::post('show-professor', [ProfessorsCRUDController::class, 'show']);
     Route::post('edit-professor', [ProfessorsCRUDController::class, 'edit']);
     Route::post('delete-professor', [ProfessorsCRUDController::class, 'destroy']);
+
+    Route::get('classes', [ClassesCRUDController::class, 'index']);
+    Route::post('store-class', [ClassesCRUDController::class, 'store']);
+    Route::post('show-class', [ClassesCRUDController::class, 'show']);
+    Route::post('edit-class', [ClassesCRUDController::class, 'edit']);
+    Route::post('delete-class', [ClassesCRUDController::class, 'destroy']);
 });

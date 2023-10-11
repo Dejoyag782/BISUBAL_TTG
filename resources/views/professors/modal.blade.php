@@ -25,7 +25,7 @@
             <div class="form-group" style="margin-top:15px;">
             <label for="prof_prof" class="col-sm-2 control-label">Courses</label>
             <div class="col-sm-12">
-                <input type="text" class="form-control" id="professor_course" name="professor_course" placeholder="Enter Professors" maxlength="50" required="">
+                <input type="text" class="form-control" id="professor_course" name="professor_course" placeholder="Enter Courses" maxlength="50" required="">
             </div>
             </div>
 

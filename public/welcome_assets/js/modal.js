@@ -130,20 +130,42 @@ function closeShowProfessorModal() {
 closeShowProfessorBtn.addEventListener("click", closeShowProfessorModal);
 
 // Add Class
-var openAddClassBtn = document.getElementById("open_addClass_modal");
-var closeAddClassBtn = document.getElementById("close_addClass_modal");
-var cancelAddClassBtn = document.getElementById("cancel_modal_AddClass");
-var addClassModal = document.getElementById("addClass_modal");
+var closeAddClassBtn = document.getElementById("close_AddClass_modal");
+var cancelAddClassBtn = document.getElementById("cancel_AddClass_modal");
+var addClassModal = document.getElementById("class-modal");
 
-openAddClassBtn.addEventListener("click", function() {
-  addClassModal.style.display = "inline-flex";
-});
-closeAddClassBtn.addEventListener("click", function() {
-  addClassModal.style.display = "none";
-});
-cancelAddClassBtn.addEventListener("click", function() {
-  addClassModal.style.display = "none";
-});
+
+function closeAddClassModal() {
+  addClassModal.classList.remove('show');
+  $("#class-modal").modal('hide');
+  setTimeout(function() {
+    var modalBackdrop = document.querySelector('.modal-backdrop.fade.show');
+    if (modalBackdrop) {
+      modalBackdrop.remove('show');
+    }
+  }, 400);
+}
+
+closeAddClassBtn.addEventListener("click", closeAddClassModal);
+cancelAddClassBtn.addEventListener("click", closeAddClassModal);
+
+// Show Class
+var closeShowClassBtn = document.getElementById("close_ShowClass_modal");
+var showClassModal = document.getElementById("class-modal-show");
+
+
+function closeShowClassModal() {
+  showClassModal.classList.remove('show');
+  $("#show-class-modal").modal('hide');
+  setTimeout(function() {
+    var modalBackdrop = document.querySelector('.modal-backdrop.fade.show');
+    if (modalBackdrop) {
+      modalBackdrop.remove('show');
+    }
+  }, 400);
+}
+
+closeShowClassBtn.addEventListener("click", closeShowCLassModal);
 
 // Add Period
 var openAddPeriodBtn = document.getElementById("open_addPeriod_modal");
