@@ -3,14 +3,14 @@ var clickableDiv2 = document.getElementById("left-nav-item-rooms");
 var clickableDiv3 = document.getElementById("left-nav-item-courses");
 var clickableDiv4 = document.getElementById("left-nav-item-professors");
 var clickableDiv5 = document.getElementById("left-nav-item-classes");
-var clickableDiv6 = document.getElementById("left-nav-item-periods");
+var clickableDiv6 = document.getElementById("left-nav-item-timeslots");
 
 var targetDiv1 = document.getElementById("dash-container");
 var targetDiv2 = document.getElementById("room-container");
 var targetDiv3 = document.getElementById("courses-container");
 var targetDiv4 = document.getElementById("professors-container");
 var targetDiv5 = document.getElementById("classes-container");
-var targetDiv6 = document.getElementById("periods-container");
+var targetDiv6 = document.getElementById("timeslots-container");
 
 function hideAllContainers() {
   targetDiv1.style.display = "none";

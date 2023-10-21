@@ -1,3 +1,4 @@
+// -------------------- GENERATE TIMETABLE -------------------- //
 // Generate Timetable
 var openModalBtn = document.getElementById("open_modal");
 var closeModalBtn = document.getElementById("close_modal");
@@ -14,6 +15,7 @@ cancelModalBtn.addEventListener("click", function() {
   timetableModal.style.display = "none";
 });
 
+// -------------------- ROOM -------------------- //
 // Add Room
 var closeAddRoomBtn = document.getElementById("close_AddRoom_modal");
 var cancelAddRoomBtn = document.getElementById("cancel_AddRoom_modal");
@@ -52,7 +54,7 @@ function closeShowRoomModal() {
 
 closeShowRoomBtn.addEventListener("click", closeShowRoomModal);
 
-
+// -------------------- COURSE -------------------- //
 // Add Course
 var closeAddCourseBtn = document.getElementById("close_AddCourse_modal");
 var cancelAddCourseBtn = document.getElementById("cancel_AddCourse_modal");
@@ -91,6 +93,7 @@ function closeShowCourseModal() {
 
 closeShowCourseBtn.addEventListener("click", closeShowCourseModal);
 
+// -------------------- PROFESSOR -------------------- //
 // Add Professor
 var closeAddProfessorBtn = document.getElementById("close_AddProfessor_modal");
 var cancelAddProfessorBtn = document.getElementById("cancel_AddProfessor_modal");
@@ -129,6 +132,7 @@ function closeShowProfessorModal() {
 
 closeShowProfessorBtn.addEventListener("click", closeShowProfessorModal);
 
+// -------------------- CLASS -------------------- //
 // Add Class
 var closeAddClassBtn = document.getElementById("close_AddClass_modal");
 var cancelAddClassBtn = document.getElementById("cancel_AddClass_modal");
@@ -156,7 +160,7 @@ var showClassModal = document.getElementById("class-modal-show");
 
 function closeShowClassModal() {
   showClassModal.classList.remove('show');
-  $("#show-class-modal").modal('hide');
+  $("#class-modal-show").modal('hide');
   setTimeout(function() {
     var modalBackdrop = document.querySelector('.modal-backdrop.fade.show');
     if (modalBackdrop) {
@@ -165,20 +169,44 @@ function closeShowClassModal() {
   }, 400);
 }
 
-closeShowClassBtn.addEventListener("click", closeShowCLassModal);
+closeShowClassBtn.addEventListener("click", closeShowClassModal);
 
-// Add Period
-var openAddPeriodBtn = document.getElementById("open_addPeriod_modal");
-var closeAddPeriodBtn = document.getElementById("close_addPeriod_modal");
-var cancelAddPeriodBtn = document.getElementById("cancel_modal_AddPeriod");
-var addPeriodModal = document.getElementById("addPeriod_modal");
 
-openAddPeriodBtn.addEventListener("click", function() {
-  addPeriodModal.style.display = "inline-flex";
-});
-closeAddPeriodBtn.addEventListener("click", function() {
-  addPeriodModal.style.display = "none";
-});
-cancelAddPeriodBtn.addEventListener("click", function() {
-  addPeriodModal.style.display = "none";
-});
+// -------------------- TIMESLOT -------------------- //
+// Add Timeslot
+var closeAddTimeslotBtn = document.getElementById("close_AddTimeslot_modal");
+var cancelAddTimeslotBtn = document.getElementById("cancel_AddTimeslot_modal");
+var addTimeslotModal = document.getElementById("timeslots-modal");
+
+
+function closeAddTimeslotModal() {
+  addTimeslotModal.classList.remove('show');
+  $("#timeslots-modal").modal('hide');
+  setTimeout(function() {
+    var modalBackdrop = document.querySelector('.modal-backdrop.fade.show');
+    if (modalBackdrop) {
+      modalBackdrop.remove('show');
+    }
+  }, 400);
+}
+
+closeAddTimeslotBtn.addEventListener("click", closeAddTimeslotModal);
+cancelAddTimeslotBtn.addEventListener("click", closeAddTimeslotModal);
+
+// Show Timeslot
+var closeShowTimeslotBtn = document.getElementById("close_ShowTimeslot_modal");
+var showTimeslotModal = document.getElementById("timeslots-modal-show");
+
+
+function closeShowTimeslotModal() {
+  showClassModal.classList.remove('show');
+  $("#timeslots-modal-show").modal('hide');
+  setTimeout(function() {
+    var modalBackdrop = document.querySelector('.modal-backdrop.fade.show');
+    if (modalBackdrop) {
+      modalBackdrop.remove('show');
+    }
+  }, 400);
+}
+
+closeShowTimeslotBtn.addEventListener("click", closeShowTimeslotModal);

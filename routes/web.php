@@ -5,6 +5,7 @@ use App\Http\Controllers\RoomsCRUDController;
 use App\Http\Controllers\CourseCRUDController;
 use App\Http\Controllers\ProfessorsCRUDController;
 use App\Http\Controllers\ClassesCRUDController;
+use App\Http\Controllers\TimeslotsCRUDController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,4 +55,10 @@ Route::middleware(['auth'])->group(function () {
     Route::post('show-class', [ClassesCRUDController::class, 'show']);
     Route::post('edit-class', [ClassesCRUDController::class, 'edit']);
     Route::post('delete-class', [ClassesCRUDController::class, 'destroy']);
+
+    Route::get('timeslots', [TimeslotsCRUDController::class, 'index']);
+    Route::post('store-timeslot', [TimeslotsCRUDController::class, 'store']);
+    Route::post('show-timeslot', [TimeslotsCRUDController::class, 'show']);
+    Route::post('edit-timeslot', [TimeslotsCRUDController::class, 'edit']);
+    Route::post('delete-timeslot', [TimeslotsCRUDController::class, 'destroy']);
 });

@@ -26,9 +26,9 @@ Dashboard
                     @include('professors.index')
                     <!--Classes View Container-->
                     @include('classes.index')
-                    <!--Periods View Container-->
-                    @include('periods.index')
-                    <!--End of Periods Container-->
+                    <!--Timeslots View Container-->
+                    @include('timeslots.index')
+                    <!--End of Timeslots Container-->
                 </div>
             </div>
         </div>

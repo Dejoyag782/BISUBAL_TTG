@@ -1,13 +1,15 @@
 <?php
- 
+
 namespace App\Models;
- 
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
- 
-class Rooms extends Model
+
+class Timeslots extends Model
 {
     use HasFactory;
- 
-    protected $fillable = [ 'room_no', 'capacity' ];
+
+    
+    protected $primaryKey = 'timeslot_id';
+    protected $fillable = [ 'time' ];
 }

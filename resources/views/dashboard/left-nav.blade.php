@@ -24,9 +24,9 @@
             <h4 class="nav-item-name">Classes</h4>
         </div>
     </a>
-    <a href="#periods" style="color:white;" class="d-xxl-flex align-content-center justify-content-xxl-center align-items-xxl-center left-nav-item" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="right" data-aos="fade-right" data-aos-delay="300" data-aos-once="true" id="left-nav-item-periods" title="Periods">
+    <a href="#timeslots" style="color:white;" class="d-xxl-flex align-content-center justify-content-xxl-center align-items-xxl-center left-nav-item" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="right" data-aos="fade-right" data-aos-delay="300" data-aos-once="true" id="left-nav-item-timeslots" title="Timeslots">
         <div class="d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-sm-center align-items-sm-center justify-content-md-center justify-content-lg-start align-items-lg-center justify-content-xl-start align-items-xl-center justify-content-xxl-start align-items-xxl-center left-nav-item-subcont" style="width: 100%;height: 100%;"><i class="fa fa-clock-o" style="padding-right: 10px;font-size: 25px;"></i>
-            <h4 class="nav-item-name">Periods</h4>
+            <h4 class="nav-item-name">Timeslots</h4>
         </div>
     </a>
 </div>

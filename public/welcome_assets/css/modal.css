@@ -81,7 +81,7 @@
   justify-content: center;
 }
 
-#addPeriod_modal {
+#addTimeslot_modal {
   position: fixed;
   left: -250px;
   top: -60px;
