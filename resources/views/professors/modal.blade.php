@@ -36,17 +36,7 @@
             </div>
             </div>
         </div>
-            <!-- <div class="modal-footer" style="display: flex; flex-direction: row; justify-content: center; margin-top:20px;">
-            <div style="margin-right:20px;">
-                <div class="btn btn-danger" id="cancel_AddProfessor_modal">Cancel
-                </div>
-            </div>
-            <div style="margin-left:20px;">
-                <button type="submit" class="btn btn-primary" id="btn-save-professor">Submit
-                </button>
-            </div>
-            </div> -->
-            
+        
             <div class="d-flex d-sm-flex d-xl-flex d-xxl-flex flex-row justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center justify-content-xxl-center align-items-xxl-center" style="height: 90px;color: var(--bs-indigo);background: rgba(108,117,125,0.57);padding: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-color: var(--bs-orange);">
                 <button class="btn btn-primary" id="cancel_AddProfessor_modal" type="button" style="width: 230px;height: 45px;background: var(--bs-red);border-style: none;border-bottom-style: none;">Cancel</button>
                 <button class="btn btn-primary" type="submit" id="btn-save-professor" style="margin-left: 20px;width: 230px;height: 45px;background: var(--bs-blue);border-style: none;">Submit</button>
@@ -96,8 +86,6 @@
             </div>
             </div>
 
-
-            
         </form>
         </div>
     </div>
